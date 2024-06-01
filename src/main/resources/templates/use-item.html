@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Item</title>
+</head>
+<body>
+    <form action="#" th:action="@{/items/${item.id}/use}" method="post" th:object="${item}">
+        <input type="hidden" th:field="*{id}">
+        <div th:text="*{name}"></div>
+        <select th:field="*{area}">
+            <option th:each="area : ${areas}"
+                    th:value="${area.id}"
+                    th:text="${area.name}">option</option>
+        </select>
+    </form>
+</body>
+</html>
