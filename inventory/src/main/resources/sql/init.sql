@@ -5,3 +5,9 @@ CREATE  TABLE item (
     target_stock NUMERIC,
     stock NUMERIC
 );
+
+create TABLE area (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    description VARCHAR
+);
